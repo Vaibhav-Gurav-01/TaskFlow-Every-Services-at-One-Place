@@ -1,108 +1,66 @@
-import React, { useState } from "react";
-import "../assets/styles/PaymentUI.css";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+// import "./PaymentUI.css"; // Import the CSS file
 
 const PaymentUI = () => {
-  const [selectedMethod, setSelectedMethod] = useState("");
+  const navigate = useNavigate();
+  const amount = 50000; // Amount in paisa (500 INR)
+  const currency = "INR";
+  const receiptId = "order_receipt_1";
 
-  const handlePaymentSelection = (method) => {
-    setSelectedMethod(method);
+  const paymentHandler = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch("http://localhost:5000/order", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ amount, currency, receipt: receiptId }),
+    });
+
+    const order = await response.json();
+    console.log(order);
+
+    const options = {
+      key: "rzp_test_BeE2yGNZvmgpZ0", // Replace with your Razorpay key
+      amount,
+      currency,
+      name: "My Business",
+      description: "Test Payment",
+      order_id: order.id,
+      handler: async function (response) {
+        console.log("Payment successful", response);
+
+        const validateResponse = await fetch(
+          "http://localhost:5000/order/validate",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(response),
+          }
+        );
+
+        const validateData = await validateResponse.json();
+        console.log(validateData);
+      },
+      prefill: {
+        name: "John Doe",
+        email: "john@example.com",
+        contact: "9876543210",
+      },
+      theme: { color: "#3399cc" },
+    };
+
+    const rzp1 = new window.Razorpay(options);
+    rzp1.open();
   };
 
   return (
     <div className="payment-container">
-      <h2>Secure Payment</h2>
-      <p>Choose your preferred payment method to proceed:</p>
-
-      {/* Payment Methods Section */}
-      <div className="payment-methods">
-        <div
-          className={`payment-method ${selectedMethod === "card" ? "selected" : ""}`}
-          onClick={() => handlePaymentSelection("card")}
-        >
-          <img src="/images/visa.png" alt="Visa" />
-          <img src="/images/mastercard.png" alt="Mastercard" />
-          <img src="/images/rupay.png" alt="RuPay" />
-          <span>Credit/Debit Card</span>
-        </div>
-        <div
-          className={`payment-method ${selectedMethod === "upi" ? "selected" : ""}`}
-          onClick={() => handlePaymentSelection("upi")}
-        >
-          <img src="/images/upi.png" alt="UPI" />
-          <span>UPI Payment</span>
-        </div>
-        <div
-          className={`payment-method ${selectedMethod === "wallet" ? "selected" : ""}`}
-          onClick={() => handlePaymentSelection("wallet")}
-        >
-          <img src="/images/paypal.png" alt="PayPal" />
-          <img src="/images/google-pay.png" alt="Google Pay" />
-          <span>Wallets</span>
-        </div>
-        <div
-          className={`payment-method ${selectedMethod === "netbanking" ? "selected" : ""}`}
-          onClick={() => handlePaymentSelection("netbanking")}
-        >
-          <img src="/images/net-banking.png" alt="Net Banking" />
-          <span>Net Banking</span>
-        </div>
-        {/* <div
-          className={`payment-method ${selectedMethod === "bnpl" ? "selected" : ""}`}
-          onClick={() => handlePaymentSelection("bnpl")}
-        >
-          <img src="/images/pay-later.png" alt="BNPL" />
-          <span>Buy Now, Pay Later</span>
-        </div> */}
-      </div>
-
-      {/* Payment Details Section */}
-      <div className="payment-details">
-        {selectedMethod === "card" && (
-          <div>
-            <h3>Enter Card Details</h3>
-            <input type="text" placeholder="Cardholder Name" />
-            <input type="number" placeholder="Card Number" />
-            <div className="expiry-cvv">
-              <input type="text" placeholder="MM/YY" />
-              <input type="text" placeholder="CVV" />
-            </div>
-            <button>Pay Now</button>
-          </div>
-        )}
-        {selectedMethod === "upi" && (
-          <div>
-            <h3>Enter UPI ID</h3>
-            <input type="text" placeholder="e.g., user@upi" />
-            <button>Proceed</button>
-          </div>
-        )}
-        {selectedMethod === "wallet" && (
-          <div>
-            <h3>Select Wallet</h3>
-            <button>PayPal</button>
-            <button>Google Pay</button>
-            <button>Apple Pay</button>
-          </div>
-        )}
-        {selectedMethod === "netbanking" && (
-          <div>
-            <h3>Select Your Bank</h3>
-            <select>
-              <option value="sbi">State Bank of India</option>
-              <option value="hdfc">HDFC Bank</option>
-              <option value="icici">ICICI Bank</option>
-            </select>
-            <button>Proceed</button>
-          </div>
-        )}
-        {selectedMethod === "bnpl" && (
-          <div>
-            <h3>Buy Now, Pay Later</h3>
-            <p>Get instant credit approval for your purchase.</p>
-            <button>Apply</button>
-          </div>
-        )}
-      </div>
+      <h2>Complete Your Payment</h2>
+      <button className="pay-btn" onClick={paymentHandler}>Pay Now</button>
+      <button className="back-btn" onClick={() => navigate("/")}>Back to Home</button>
     </div>
   );
 };

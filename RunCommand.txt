@@ -1,0 +1,9 @@
+// For Razorpay
+
+cd "Razorpay Server" 
+nodemon server.js
+
+
+// for Front End
+cd "React Code" 
+npm start

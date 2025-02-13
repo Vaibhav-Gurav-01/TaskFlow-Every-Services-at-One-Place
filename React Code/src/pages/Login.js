@@ -311,7 +311,7 @@ const Login = () => {
                 <label
                   style={{
                     ...styles.radioLabel,
-                    ...(role === "admin" ? styles.radioLabelSelected : {}),
+                     ...(role === "admin" ? styles.radioLabelSelected : {}),
                   }}
                 >
                   <input
