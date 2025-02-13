@@ -1,0 +1,8 @@
+D:\Pradip\ServiceManagementApp\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.csproj.AssemblyReference.cache
+D:\Pradip\ServiceManagementApp\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pradip\ServiceManagementApp\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.AssemblyInfoInputs.cache
+D:\Pradip\ServiceManagementApp\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.AssemblyInfo.cs
+D:\Pradip\ServiceManagementApp\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.csproj.CoreCompileInputs.cache
+D:\Pradip\ServiceManagementApp\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.MvcApplicationPartsAssemblyInfo.cache
+D:\Pradip\ServiceManagementApp\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.RazorAssemblyInfo.cache
+D:\Pradip\ServiceManagementApp\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.RazorAssemblyInfo.cs

@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h2>Admin Dashboard</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Total Users: @Model.TotalUsers</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Total Bookings: @Model.TotalBookings</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Total Vendors: @Model.TotalVendors</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Total Revenue: $@Model.TotalRevenue</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
