@@ -59,8 +59,12 @@ const PaymentUI = () => {
   return (
     <div className="payment-container">
       <h2>Complete Your Payment</h2>
-      <button className="pay-btn" onClick={paymentHandler}>Pay Now</button>
-      <button className="back-btn" onClick={() => navigate("/")}>Back to Home</button>
+      <button className="pay-btn" onClick={paymentHandler}>
+        Pay Now
+      </button>
+      <button className="back-btn" onClick={() => navigate("/")}>
+        Back to Home
+      </button>
     </div>
   );
 };

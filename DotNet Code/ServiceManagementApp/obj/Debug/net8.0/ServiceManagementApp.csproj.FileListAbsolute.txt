@@ -6,3 +6,12 @@ D:\Pradip\ServiceManagementApp\ServiceManagementApp\obj\Debug\net8.0\ServiceMana
 D:\Pradip\ServiceManagementApp\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.MvcApplicationPartsAssemblyInfo.cache
 D:\Pradip\ServiceManagementApp\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.RazorAssemblyInfo.cache
 D:\Pradip\ServiceManagementApp\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.RazorAssemblyInfo.cs
+C:\Users\CDAC\Documents\Vaibhav Projects\TaskFlow-Every-Services-at-One-Place\DotNet Code\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.csproj.AssemblyReference.cache
+C:\Users\CDAC\Documents\Vaibhav Projects\TaskFlow-Every-Services-at-One-Place\DotNet Code\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CDAC\Documents\Vaibhav Projects\TaskFlow-Every-Services-at-One-Place\DotNet Code\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.AssemblyInfoInputs.cache
+C:\Users\CDAC\Documents\Vaibhav Projects\TaskFlow-Every-Services-at-One-Place\DotNet Code\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.AssemblyInfo.cs
+C:\Users\CDAC\Documents\Vaibhav Projects\TaskFlow-Every-Services-at-One-Place\DotNet Code\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.csproj.CoreCompileInputs.cache
+C:\Users\CDAC\Documents\Vaibhav Projects\TaskFlow-Every-Services-at-One-Place\DotNet Code\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\CDAC\Documents\Vaibhav Projects\TaskFlow-Every-Services-at-One-Place\DotNet Code\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.RazorAssemblyInfo.cache
+C:\Users\CDAC\Documents\Vaibhav Projects\TaskFlow-Every-Services-at-One-Place\DotNet Code\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.RazorAssemblyInfo.cs
+C:\Users\CDAC\Documents\Vaibhav Projects\TaskFlow-Every-Services-at-One-Place\DotNet Code\ServiceManagementApp\obj\Debug\net8.0\ServiceManagementApp.sourcelink.json

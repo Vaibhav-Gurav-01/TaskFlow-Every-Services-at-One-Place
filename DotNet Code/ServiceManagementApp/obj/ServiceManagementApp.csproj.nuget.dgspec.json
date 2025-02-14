@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Pradip\\ServiceManagementApp\\ServiceManagementApp\\ServiceManagementApp.csproj": {}
+    "C:\\Users\\CDAC\\Documents\\Vaibhav Projects\\TaskFlow-Every-Services-at-One-Place\\DotNet Code\\ServiceManagementApp\\ServiceManagementApp.csproj": {}
   },
   "projects": {
-    "D:\\Pradip\\ServiceManagementApp\\ServiceManagementApp\\ServiceManagementApp.csproj": {
+    "C:\\Users\\CDAC\\Documents\\Vaibhav Projects\\TaskFlow-Every-Services-at-One-Place\\DotNet Code\\ServiceManagementApp\\ServiceManagementApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pradip\\ServiceManagementApp\\ServiceManagementApp\\ServiceManagementApp.csproj",
+        "projectUniqueName": "C:\\Users\\CDAC\\Documents\\Vaibhav Projects\\TaskFlow-Every-Services-at-One-Place\\DotNet Code\\ServiceManagementApp\\ServiceManagementApp.csproj",
         "projectName": "ServiceManagementApp",
-        "projectPath": "D:\\Pradip\\ServiceManagementApp\\ServiceManagementApp\\ServiceManagementApp.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\Pradip\\ServiceManagementApp\\ServiceManagementApp\\obj\\",
+        "projectPath": "C:\\Users\\CDAC\\Documents\\Vaibhav Projects\\TaskFlow-Every-Services-at-One-Place\\DotNet Code\\ServiceManagementApp\\ServiceManagementApp.csproj",
+        "packagesPath": "C:\\Users\\CDAC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CDAC\\Documents\\Vaibhav Projects\\TaskFlow-Every-Services-at-One-Place\\DotNet Code\\ServiceManagementApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\CDAC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,12 +39,28 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[9.0.1, )"
@@ -49,6 +70,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.1, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             }
           },
           "imports": [
@@ -70,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
